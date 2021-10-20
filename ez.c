@@ -6,6 +6,8 @@
 #include <sys/types.h>
 #include <unistd.h>
 
+#pragma GCC diagnostics ignored "-fmax-errors=4"
+
 void flag()
 {
   char buf[80];
@@ -24,6 +26,7 @@ bool login()
 {
   char pwd[8];
   puts("What's the password?");
+  
   gets(pwd);
   return strcmp(pwd, "ezpzlemonsqueezy") == 0;
 }
@@ -31,12 +34,9 @@ bool login()
 int main(void)
 {
   login();
-  while (!login())
-  {
-    puts("nope");
-    login();
+  while(true) {
+
   }
-  puts("yes!");
 
   exit(0);
 
