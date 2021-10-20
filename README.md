@@ -38,7 +38,9 @@ Stuck On: Basic Logic down, just gotta actually figure out how to do this
 
 # xor key secrecy
 -the key length is unknown
-  
+
+-legit just bruteforcing the key with some guessing
+
 -the presented cipher is the flag not the key
   
 Stuck On: How to bruteforce the key
