@@ -42,6 +42,8 @@ Stuck On: Basic Logic down, just gotta actually figure out how to do this
 -legit just bruteforcing the key with some guessing
 
 -the presented cipher is the flag not the key
+
+-[algorithm?](https://arpitbhayani.me/blogs/decipher-repeated-key-xor)
   
 Stuck On: How to bruteforce the key
 
