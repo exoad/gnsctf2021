@@ -13,6 +13,8 @@ Stuck On: Getting the rest of the flag
 # Noisy Transmission
 -Listen to the morse code
   
+-the .wav file is the actual challenge
+  
 Stuck On: Online decoders get overrun by the amount of static within
 
 # Quiet and falling
