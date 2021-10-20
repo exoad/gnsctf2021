@@ -5,11 +5,6 @@ Stuck On: Getting the rest of the flag
 
 -flag part located in section gnsCTF2
 
-# Who's that pokemon
--solved
-
-Solution: Just literally put your cursor over the gif and you could then see the link embedded as the name of the pokemon
-
 # Noisy Transmission
 -Listen to the morse code
   
