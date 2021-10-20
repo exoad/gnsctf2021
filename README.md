@@ -62,6 +62,7 @@ Known: Image size cannot exceed 16mb
 
 # My World
 -does not involve actually loading world into Minecraft
+-possibly using an NBT viewer to inspect the .mca files to find a structure? (sign text, etc.)
   
 -due to the hint being "built somewhere" it should be noted that it should be found
 within the folder "poi" (point of interaction) as a binary
