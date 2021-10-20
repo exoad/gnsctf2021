@@ -45,6 +45,17 @@ Stuck On: Basic Logic down, just gotta actually figure out how to do this
 
 -probable code:
 ```python
+import math
+
+def hamming_distance_bytes(text1: bytes, text2: bytes) -> int:
+    dist = 0
+    for byte1, byte2 in zip(text1, text2):
+        dist += bin(byte1 ^ byte2).count('1')
+    return dist
+    
+def hamming_score_bytes(text1: bytes, text2: bytes) -> float:
+    return hamming_distance_bytes(text1, text2) / (8 * min(len(text1), len(text2)))
+
 def compute_key_length(text: bytes) -> int:
     min_score, key_len = None, None
     for klen in range(2, math.ceil(len(text)/2)):
@@ -63,7 +74,11 @@ def compute_key_length(text: bytes) -> int:
         if min_score is None or score < min_score:
             min_score, key_len = score, klen
     return key_len
+    
+print(compute_key_length(bytes("0901073031250910075d300740061600562b055c0d463a131e5009", 'utf-8')))
 ```
+  
+**Basic Process** First find the length of the ciphertext (in hex) using the hamming distance and then bruteforce it  
   
 Stuck On: How to bruteforce the key
 
