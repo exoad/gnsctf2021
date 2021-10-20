@@ -43,7 +43,27 @@ Stuck On: Basic Logic down, just gotta actually figure out how to do this
 
 -the presented cipher is the flag not the key
 
--[algorithm?](https://arpitbhayani.me/blogs/decipher-repeated-key-xor)
+-probable code:
+```python
+def compute_key_length(text: bytes) -> int:
+    min_score, key_len = None, None
+    for klen in range(2, math.ceil(len(text)/2)):
+        chunks = [
+            text[i: i+klen]
+            for i in range(0, len(text), klen)
+        ]
+        if len(chunks) >= 2 and len(chunks[-1]) <= len(chunks[-2])/2:
+            chunks.pop()
+        _scores = []
+        for i in range(0, len(chunks) - 1, 1):
+            for j in range(i+1, len(chunks), 1):
+                score = hamming_score_bytes(chunks[i], chunks[j])
+                _scores.append(score)
+        score = sum(_scores) / len(_scores)
+        if min_score is None or score < min_score:
+            min_score, key_len = score, klen
+    return key_len
+```
   
 Stuck On: How to bruteforce the key
 
