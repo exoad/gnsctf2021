@@ -6,9 +6,8 @@ Stuck On: Getting the rest of the flag
 -flag part located in section gnsCTF2
 
 # Who's that pokemon
--I dont know any pokemons
-
--use the bot in your dms and do !wtp <num>
+-solved
+Solution: Just literally put your cursor over the gif and you could then see the link embedded as the name of the pokemon
 
 # Noisy Transmission
 -Listen to the morse code
@@ -62,7 +61,6 @@ Known: Image size cannot exceed 16mb
 
 # My World
 -does not involve actually loading world into Minecraft
--possibly using an NBT viewer to inspect the .mca files to find a structure? (sign text, etc.)
   
 -due to the hint being "built somewhere" it should be noted that it should be found
 within the folder "poi" (point of interaction) as a binary
