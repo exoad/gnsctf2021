@@ -30,6 +30,9 @@ Stuck On: \x84 when convertted to ASCII is invalid
 
 # Noot's Flat Earth Tavern
 -Command: /flag but disabled because not admin
+-finding the right command to give you access as either admin
+-finding an exploit to view as admin thus leading us to be able to view
+the flag via /flag
 
 # ez
 -due to "gets()" not being able to control buffer size, it should be assumed
