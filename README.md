@@ -45,6 +45,10 @@ Stuck On: Basic Logic down, just gotta actually figure out how to do this
   
 Stuck On: How to bruteforce the key
 
+Key tries:
+![](images/41C73761-7A42-4EAE-BC04-CF29801C62D8.jpeg)
+  
+  
 # CDN++
 -the main program is figuring out a binary format in the extension of the allowed
 extensions that will not work with it
