@@ -79,6 +79,8 @@ print(compute_key_length(bytes("0901073031250910075d300740061600562b055c0d463a13
 ```
   
 **Basic Process** First find the length of the ciphertext (in hex) using the hamming distance and then bruteforce it  
+
+Key length should be 24 (bytes)
   
 Stuck On: How to bruteforce the key
 
