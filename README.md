@@ -1,3 +1,9 @@
+# Dault Voor 2
+-Code (current)(WIP):
+```cpp
+
+```
+
 # Encyclopedia Knowledge:
 -use Wikipedia view version edited by user GnsCtf2 on day Oct 11
 
