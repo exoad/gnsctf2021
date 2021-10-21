@@ -15,7 +15,7 @@ public class DaultVoorEECrack {
             
     }
     
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         //hardcode length of 5
         int[] arr = {1832155490, -590512956, 859174627, 1473976589, 892431156};
         solve(arr);
