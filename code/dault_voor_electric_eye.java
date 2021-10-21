@@ -1,14 +1,10 @@
-//java implementation of the result: m4ybÜÍ|Ä35öãWÛ
-//51k4
-
 public class MyClass {
     //shift the bits to the left (from the right)
-    static int rotLeft(int i, int r) { return (i >> (32 + r)) | (i << r); }
+    static int rotLeft(int i, int r) { return (i << r) | (i >>> (r - 32)); }
     static void solve(int[] arr) {
         int[] rot = new int[5];
         for(int i = 0; i < 5; i++)
-            rot[i] = rotLeft(arr[i], i / 6);
-        
+            rot[i] = rotLeft(arr[i], i * 6);
         for(int e : rot) {
             System.out.print((char) ((e & 4278190080L) >> 24));
             System.out.print((char) ((e & 16711680L) >> 16));
