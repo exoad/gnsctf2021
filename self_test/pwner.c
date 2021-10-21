@@ -6,6 +6,7 @@
 #include <sys/types.h>
 #include <unistd.h>
 
+/*
 void flag()
 {
     char buf[80];
@@ -20,6 +21,7 @@ void flag()
     fgets(buf, 80, f);
     puts(buf);
 }
+*/
 
 int main(void)
 {
@@ -29,8 +31,7 @@ int main(void)
         fgets(password, 33, stdin);
         if (strcmp(password, "\x45\x49\x04\x84\x05\x84\x23\x02\x99\x32\x03\n") == 0)
         {
-            puts("Woah you're a real pwner! Here's your flag:");
-            flag();
+            puts("Correct");
         }
         else
             puts("Nope!");
