@@ -7,6 +7,9 @@ Exploit: Just literally put your cursor over the gif and you could then see the 
 -solved
 
 Solution: Wrote a script that first convertted the bytes back to integer and then moved them to the left (shift)
+After this script began to take on meaning, there was comment on the following:
+```// My electric eye broke and messed up the bit arrangements... SAD!```
+which further confirmed 
 
 # DaultVoor2
 -solved
