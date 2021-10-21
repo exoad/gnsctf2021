@@ -1,4 +1,4 @@
-public class MyClass {
+public class DaultVoorEECrack {
     //shift the bits to the left (from the right)
     static int rotLeft(int i, int r) { return (i << r) | (i >>> (r - 32)); }
     static void solve(int[] arr) {

@@ -28,7 +28,6 @@ int main(void)
     char password[33];
     while (1)
     {
-        puts("input\n");
         fgets(password, 33, stdin);
         if (strcmp(password, "\x45\x49\x04\x84\x05\x84\x23\x02\x99\x32\x03\n") == 0)
         {
