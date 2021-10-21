@@ -11,13 +11,23 @@ void solve(int arr[]) {
         cout << (char) ((arr[i] & 255));
         cout << endl;
     }
+    
+    
 }
 
 // have to write a method that rotates the chunk bytes as in the original code
 
-int rotate(int i, int arr[]) {
+void rotateLeft(int i, int arr[]) {
     
 }
+
+/*
+Old rotate right
+  public static int rotateRight(int i, int rot) {
+    return (i >>> rot) | (i << (32-rot));
+  }
+
+*/
 
 int main(void) {
     int arr[5] = {1832155490, -590512956, 859174627, 1473976589, 892431156};
