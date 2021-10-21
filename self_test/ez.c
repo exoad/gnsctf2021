@@ -1,4 +1,3 @@
-// modified version for easier testing
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -7,6 +6,7 @@
 #include <unistd.h>
 
 #pragma GCC diagnostics ignored "-fmax-errors=4"
+#pragma GCC diagnostics ignored "-Wdeprecated-declarations"
 
 void flag()
 {
@@ -26,16 +26,26 @@ bool login()
 {
   char pwd[8];
   puts("What's the password?");
-  
+
   gets(pwd);
   return strcmp(pwd, "ezpzlemonsqueezy") == 0;
 }
 
 int main(void)
 {
-  login();
-  while(true) {
-
+  puts("login\n");
+  while (true)
+  {
+    if (!login())
+    {
+      puts("try again");
+      login();
+    }
+    else
+    {
+      puts("yes");
+      break;
+    }
   }
 
   exit(0);
