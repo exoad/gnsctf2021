@@ -6,11 +6,11 @@ public class DaultVoorEE {
     System.out.println("Enter the password to our highly secure Dault Voor!");
     String pw = in.nextLine();
     while (!check(pw)) {
-      puts("NOPE");
+      puts("NOPE1");
       pw = in.next();
 
     }
-    puts("YES");
+    puts("YES1");
     in.close();
   }
 
