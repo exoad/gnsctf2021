@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class CaesarInsanity {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
@@ -10,34 +9,35 @@ public class CaesarInsanity {
 			if (check(password)) {
 				System.out.println("Correct password!");
 				break;
-			} else {
+			} else
 				System.out.println("Incorrect password!");
-			}
 		}
 	}
-
+	/**
+	 * @param password the password to compare with the variable encrypted
+	 * @return if true the password is correct else false 
+	 */
 	static boolean check(String password) {
 		char[] arr = password.toCharArray();
 		int len = arr.length;
+		//encryption method
+		// the part to actually reverse
 		for (int i = 0; i < len; i++) {
 			arr[i] = shift(arr[i], 623);
 			for (int j = len - 1; j >= 0; j--) {
 				arr[j] = shift(arr[j], 184);
 				for (int k = i; k < len; k++) {
 					arr[k] = shift(arr[k], 567);
-				}
+			}	
 			}
 		}
 		String encrypted = "pd9i_g5l7_du7_b5t9b_5eno4_z4_y8q8_ty4w7vp";
-		for (int i = 0; i < len; i++) {
-			if (arr[i] != encrypted.charAt(i)) {
+		//comparing the encrypted password against the original password
+		for (int i = 0; i < len; i++)
+			if (arr[i] != encrypted.charAt(i))
 				return false;
-			}
-		}
 		return true;
 	}
-
-
 	/**
 	 * @param c this is the char the method will shift
 	 * @param shift the amount of shift
