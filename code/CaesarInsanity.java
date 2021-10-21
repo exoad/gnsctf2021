@@ -9,7 +9,6 @@ public class CaesarInsanity {
 			scan.close();
 			if (check(password)) {
 				System.out.println("Correct password!");
-				System.out.println("Make sure to submit the flag as gnsCTF{" + password + "}");
 				break;
 			} else {
 				System.out.println("Incorrect password!");
@@ -38,6 +37,30 @@ public class CaesarInsanity {
 		return true;
 	}
 
+
+	/**
+	 * @param c this is the char the method will shift
+	 * @param shift the amount of shift
+	 * @return the character shifted (throughout the ascii table with the char added by an int of shift)
+	 * 
+	 * Process:
+	 * CONDITION #1: if the char is turned in as the underscore space key, it will be ignored 
+	 * Condition #2 PART A: if the char is bigger than char pos 96 (a to ~) =>
+	 * {
+	 * 		alter shift by mod 26
+	 * 		CONDITION #2 PART B: if the char (int) plus the shift value is between { and ~ => {
+	 * 	  	move c down (-) 26 shifts
+	 * 	  }
+	 *    move c up shift value
+	 * } 
+	 * CONDITION #3 PART A: if the char is smaller than pos 96 (_ to [SPACE]) => {
+	 *    alter the shift by mod 9
+	 *    CONDITION #3 PART B: if the char (int) plus the shift value is between _ & ~ => {
+	 *     move c down (-) 9 shifts
+	 *    }
+	 * 	  move c up shift value
+	 * }
+	 */
 	static char shift(char c, int shift) {
 		if (c == '_')
 			return c;
