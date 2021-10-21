@@ -5,13 +5,11 @@ public class DaultVoorEE {
     Scanner in = new Scanner(System.in);
     System.out.println("Enter the password to our highly secure Dault Voor!");
     String pw = in.nextLine();
-    while (!check(pw)) {
-      puts("NOPE1");
-      pw = in.next();
-
-    }
-    puts("YES1");
-    in.close();
+      if(!check(pw))
+        puts("nope");
+      else
+        puts("yes");
+        
   }
 
   public static boolean check(String password) {
