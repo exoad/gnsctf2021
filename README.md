@@ -33,6 +33,8 @@ Stuck On: Getting the rest of the flag
 -Listen to the morse code
   
 -the .wav file is the actual challenge
+
+-check using exiftool
   
 Stuck On: Online decoders get overrun by the amount of static within
 
