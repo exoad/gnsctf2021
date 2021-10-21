@@ -3,6 +3,11 @@
 
 Exploit: Just literally put your cursor over the gif and you could then see the link embedded as the name of the pokemon
 
+# Dault Voor Electric Eye
+-solved
+
+Solution: Wrote a script that first convertted the bytes back to integer and then moved them to the left (shift)
+
 # DaultVoor2
 -solved
 
