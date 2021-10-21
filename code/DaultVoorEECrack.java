@@ -9,7 +9,7 @@ public class DaultVoorEECrack {
             System.out.print((char) ((e & 4278190080L) >> 24));
             System.out.print((char) ((e & 16711680L) >> 16));
             System.out.print((char) ((e & 65280L) >> 8));
-            System.out.print((char) ((e & 255L)));
+            System.out.print((char) (e & 255L));
             System.out.flush();
         }
             
