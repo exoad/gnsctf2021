@@ -61,8 +61,8 @@ void solve(int arr[]) {
 
 // have to write a method that rotates the chunk bytes as in the original code
 
-void rotateLeft(int i, int arr[]) {
-    
+void rotateLeft(int i, int rot) {
+    return (i <<< rot) | (i >> (32-rot));
 }
 
 /*
