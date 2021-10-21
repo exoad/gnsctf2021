@@ -13,6 +13,12 @@ void solve(int arr[]) {
     }
 }
 
+// have to write a method that rotates the chunk bytes as in the original code
+
+int rotate(int i, int arr[]) {
+    
+}
+
 int main(void) {
     int arr[5] = {1832155490, -590512956, 859174627, 1473976589, 892431156};
     solve(arr);
