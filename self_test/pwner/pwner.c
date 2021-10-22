@@ -29,10 +29,8 @@ int main(void)
     while (1)
     {
         fgets(password, 33, stdin);
-        if (strcmp(password, "\x45\x49\x04\x84\x05\x84\x23\x02\x99\x32\x03\n") == 0)
-        {
+        if (strcmp(password, "\x45\x49\x04\x84\x05\x84\x23\x02\x99\x32\n") == 0)
             puts("Correct");
-        }
         else
             puts("Nope!");
     }
