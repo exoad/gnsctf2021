@@ -32,6 +32,8 @@ Stuck On: Basic Logic down, just gotta actually figure out how to do this
 # xor key secrecy
 -the key length is unknown
 
+-closest decode is the phrase `notsecr`
+
 -legit just bruteforcing the key with some guessing
 
 -the presented cipher is the flag not the key
