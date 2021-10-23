@@ -3,16 +3,7 @@
 
 Stuck On: Getting the rest of the flag
 
--flag part located in section gnsCTF2
-
-# Noisy Transmission
--Listen to the morse code
-  
--the .wav file is the actual challenge
-
--check using exiftool
-  
-Stuck On: Online decoders get overrun by the amount of static within
+-flag part located in section gnsCTF
 
 # Quiet and falling
 -use your inspector and select the element representing the "..." and there
@@ -123,9 +114,6 @@ you this super dark green color
 -use gdb
 
 # bookface
--requires two people to infiltrate the site at once within a limit of 10 minutes to take
-down one of the books
-  
--books excluded: nottflag
-  
-Stuck On: determining what this "popular" book is
+-web vuln topic: broken auth & session management [click here](https://cwe.mitre.org/data/definitions/724.html)
+
+-use burp suite
