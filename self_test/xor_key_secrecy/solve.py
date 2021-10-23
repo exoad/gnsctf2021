@@ -1,199 +1,209 @@
 from base64 import b64decode
+from typing import Counter, Tuple
+
+occurance_english = {
+    'a': 8.2389258,
+    'b': 1.5051398,
+    'c': 2.8065007,
+    'd': 4.2904556,
+    'e': 12.813865,
+    'f': 2.2476217,
+    'g': 2.0327458,
+    'h': 6.1476691,
+    'i': 6.1476691,
+    'j': 0.1543474,
+    'k': 0.7787989,
+    'l': 4.0604477,
+    'm': 2.4271893,
+    'n': 6.8084376,
+    'o': 7.5731132,
+    'p': 1.9459884,
+    'q': 0.0958366,
+    'r': 6.0397268,
+    's': 6.3827211,
+    't': 9.1357551,
+    'u': 2.7822893,
+    'v': 0.9866131,
+    'w': 2.3807842,
+    'x': 0.1513210,
+    'y': 1.9913847,
+    'z': 0.0746517
+}
+
+
+def decipher(text: bytes) -> Tuple[bytes, int]:
+    original_text, encryption_key, min_fq = None, None, None
+    for k in range(256):
+
+        _text = single_byte_xor(text, k)
+
+        _fq = compute_fitting_quotient(_text)
+
+        if min_fq is None or _fq < min_fq:
+            encryption_key, original_text, min_fq = k, _text, _fq
+
+    return original_text, encryption_key
+
+
+def single_byte_xor(text: bytes, key: int) -> bytes:
+    return bytes([b ^ key for b in text])
+
 
 def hamming_distance(bytes1, bytes2):
-  # The strings must be equal length or this will fail.
-  assert len(bytes1) == len(bytes2)
 
-  distance = 0
-  for zipped_bytes in zip(bytes1, bytes2):
-    # XOR a bit from bytes1 with the corresponding bit in bytes2
-    x = zipped_bytes[0] ^ zipped_bytes[1]
+    assert len(bytes1) == len(bytes2)
 
-    set_bits = 0
-    while (x > 0):
-      # Check if the right most bit is set. If it is then track it.
-      set_bits += x & 1;
+    distance = 0
+    for zipped_bytes in zip(bytes1, bytes2):
 
-      # Right shift the bits so we can check the next one in line.
-      x >>= 1; 
+        x = zipped_bytes[0] ^ zipped_bytes[1]
 
-    # Add the number of set bits for the current chars to the total
-    # distance
-    distance += set_bits
+        set_bits = 0
+        while (x > 0):
 
-  return distance
+            set_bits += x & 1
+
+            x >>= 1
+
+        distance += set_bits
+
+    return distance
 
 
 dist_english = list(occurance_english.values())
 
-def compute_fitting_quotient(text: bytes) -> float:
-    """Given the stream of bytes `text` the function computes the fitting
-    quotient of the letter frequency distribution for `text` with the
-    letter frequency distribution of the English language.
 
-    The function returns the average of the absolute difference between the
-    frequencies (in percentage) of letters in `text` and the corresponding
-    letter in the English Language.
-    """
+def compute_fitting_quotient(text: bytes) -> float:
     counter = Counter(text)
-    dist_text = [
-        (counter.get(ord(ch), 0) * 100) / len(text)
-        for ch in occurance_english
-    ]
-    return sum([abs(a - b) for a, b in zip(dist_english, dist_text)]) / len(dist_text)
+    dist_text = [(counter.get(ord(ch), 0) * 100) / len(text)
+                 for ch in occurance_english]
+    return sum([abs(a - b)
+                for a, b in zip(dist_english, dist_text)]) / len(dist_text)
+
 
 b1 = b'this is a test'
 b2 = b'wokka wokka!!!'
 
 assert hamming_distance(b1, b2) == 37
 
+
 def get_keylength(ciphertext):
-  lowest = None
-  best_keylength = None
+    lowest = None
+    best_keylength = None
 
-  for keylength in range(2, 41):
-    to_average = []
+    for keylength in range(2, 41):
+        to_average = []
 
-    # Define the starting and ending points for the first chunk
-    start = 0
-    end = start + keylength
-    while (1):
-      # Grab 2 adjacent chunks of data that are KEYLENGTH long.
-      first_chunk = ciphertext[start:end]
-      second_chunk = ciphertext[start + keylength:end + keylength]
+        start = 0
+        end = start + keylength
+        while (1):
 
-      # Check if we're at the end of ciphertext. We can ignore the
-      # dangling bit.
-      if (len(second_chunk) < keylength):
-          break
+            first_chunk = ciphertext[start:end]
+            second_chunk = ciphertext[start + keylength:end + keylength]
 
-      # Find the distance between these two KEYLENGTH chunks
-      distance = hamming_distance(first_chunk, second_chunk)
+            if (len(second_chunk) < keylength):
+                break
 
-      """
+            distance = hamming_distance(first_chunk, second_chunk)
+            """
       "Normalize" the distance. This basically gets it to a decimal
       place that is relative to the total keylength so that it can be
       compared to distances based on other key lengths.
       """
-      normalized = distance / keylength
+            normalized = distance / keylength
 
-      # We've got a score append it to the list of distances we want
-      # the average of.
-      to_average.append(normalized)
+            to_average.append(normalized)
 
-      # Move on to the next chunk that we'll want to get hamming
-      # distances for.
-      start = end + keylength
-      end = start + keylength
+            start = end + keylength
+            end = start + keylength
 
-    # Find the average of those distances and then empty out the array
-    # for the next iteration.
-    average = sum(to_average) / len(to_average)
-    to_average = []
+        average = sum(to_average) / len(to_average)
+        to_average = []
 
-    # Check if we've beat the current lowest score. If we have that's
-    # more likely the correct key length.
-    if lowest == None or average < lowest:
-      lowest = average
-      best_keylength = keylength
+        if lowest == None or average < lowest:
+            lowest = average
+            best_keylength = keylength
 
-  return best_keylength
+    return best_keylength
+
 
 def decrypt(message_bytes, key):
-  decrypted = b''
+    decrypted = b''
 
-  i = 0
-  for byte in message_bytes:
-    # Go back to the beginning of the key if we've reached it's length.
-    # This handles the "repeating" bit of the key.
-    if (i == len(key)):
-      i = 0
+    i = 0
+    for byte in message_bytes:
 
-    # Convert the key char to a number so it can be XOR'd
-    xor = byte ^ ord(key[i])
-    
-    # Convert the xor'd value back to bytes... bytes(...) requires an
-    # array as an argument, hence the [...]
-    decrypted += bytes([xor])
+        if (i == len(key)):
+            i = 0
 
-    i += 1
+        xor = byte ^ ord(key[i])
 
-  return decrypted
+        decrypted += bytes([xor])
+
+        i += 1
+
+    return decrypted
+
 
 def transpose_chunks_by_keylength(keylength, ciphertext):
-  # Create a dictionary for the number of chunks that the data can be
-  # broken into.
-  chunks = dict.fromkeys(range(keylength))
 
-  i = 0
-  for octet in data:
-    # If we're at the end of the key start at the beginning again. This
-    # is "repeating key" XOR after all.
-    if (i == keylength): i = 0
+    chunks = dict.fromkeys(range(keylength))
 
-    # If the chunk is null, initialize it to an empty array.
-    if (chunks[i] == None): chunks[i] = []
+    i = 0
+    for octet in data:
 
-    # Append the current octet to the chunk.
-    chunks[i].append(octet)
+        if (i == keylength): i = 0
 
-    i += 1
+        if (chunks[i] == None): chunks[i] = []
 
-  return chunks
+        chunks[i].append(octet)
+
+        i += 1
+
+    return chunks
+
 
 def get_key(blocks):
-  common = 'ETAOIN SHRDLU'
-  key = ''
+    common = 'ETAOIN SHRDLU'
+    key = ''
 
-  for i in blocks:
-    current_high_score = 0
-    current_key_char = ''
+    for i in blocks:
+        current_high_score = 0
+        current_key_char = ''
 
-    for j in range(127):
-      # Create an array of all the XOR'd
-      x = [j ^ the_bytes for the_bytes in blocks[i]]
-            
-      # Convert the array of numbers back into bytes
-      b = bytes(x)
+        for j in range(127):
 
-      # Convert to a string so we can compare it to the common
-      # letters.
-      b_str = str(b, 'utf-8')
+            x = [j ^ the_bytes for the_bytes in blocks[i]]
 
-      # Increase the score for everywhere there is overlap
-      score = 0
-      for k in b_str.upper():
-          if k in common:
-              score += 1
+            b = bytes(x)
 
-      # If this score is better for this char, keep it
-      if score > current_high_score:
-        current_high_score = score
-        current_key_char = chr(j)
+            b_str = str(b, 'utf-8')
 
-    key += current_key_char
+            score = 0
+            for k in b_str.upper():
+                if k in common:
+                    score += 1
 
-  return key
+            if score > current_high_score:
+                current_high_score = score
+                current_key_char = chr(j)
+
+        key += current_key_char
+
+    return key
 
 
 the_file = open('self_test/xor_key_secrecy/6.txt', 'r')
 data = the_file.read()
 
-# We know the file is base64 encoded so decode it first, this converts it
-# to raw bytes.
 decoded = b64decode(data)
 
-# First we need to take a stab at finding the key length.
 keylength = get_keylength(decoded)
 
-# Once we have a good key length transpose the chunks
 chunks = transpose_chunks_by_keylength(keylength, decoded)
 
-# Get the key from the transposed chunks
 key = get_key(chunks)
 
-# Decrypt the ciphertext
 decrypted = decrypt(decoded, key)
 
-# Find out what it is!
 print(decrypted)
