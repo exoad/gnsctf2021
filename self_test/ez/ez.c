@@ -21,6 +21,8 @@ void flag()
 
 bool login()
 {
+  // 16 to overflow
+  // aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
   char pwd[8];
   puts("What's the password?");
 

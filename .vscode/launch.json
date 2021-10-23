@@ -2,6 +2,20 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "type": "java",
+      "name": "Launch Solve",
+      "request": "launch",
+      "mainClass": "self_test.caesar.Solve",
+      "projectName": "ctf2021_ce0a53f9"
+    },
+    {
+      "type": "java",
+      "name": "Launch CaesarInsanity",
+      "request": "launch",
+      "mainClass": "self_test.caesar.CaesarInsanity",
+      "projectName": "ctf2021_ce0a53f9"
+    },
+    {
       "name": "C/C++ Runner: Debug Session",
       "type": "cppdbg",
       "request": "launch",
