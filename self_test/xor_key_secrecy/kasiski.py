@@ -1,6 +1,5 @@
 from collections import Counter
 from encrypted import enc_ascii
-from itertools import izip, cycle
 from encrypted import enc_numbers
 
 def shift(data, offset):
