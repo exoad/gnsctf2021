@@ -24,6 +24,24 @@ def hamming_distance(bytes1, bytes2):
   return distance
 
 
+dist_english = list(occurance_english.values())
+
+def compute_fitting_quotient(text: bytes) -> float:
+    """Given the stream of bytes `text` the function computes the fitting
+    quotient of the letter frequency distribution for `text` with the
+    letter frequency distribution of the English language.
+
+    The function returns the average of the absolute difference between the
+    frequencies (in percentage) of letters in `text` and the corresponding
+    letter in the English Language.
+    """
+    counter = Counter(text)
+    dist_text = [
+        (counter.get(ord(ch), 0) * 100) / len(text)
+        for ch in occurance_english
+    ]
+    return sum([abs(a - b) for a, b in zip(dist_english, dist_text)]) / len(dist_text)
+
 b1 = b'this is a test'
 b2 = b'wokka wokka!!!'
 
