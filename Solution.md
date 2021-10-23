@@ -11,6 +11,13 @@ After this script began to take on meaning, there was comment on the following:
 ```// My electric eye broke and messed up the bit arrangements... SAD!```
 which further confirmed 
 
+# Noisy Transmission
+-solved
+
+Solution: Look through the `noisy.wav` file through an app like sonic visualizer and then short beams are `.` and longer ones are `_` then put that through a morse to 
+text translator to get:
+`th1sfl4g1sl0st1nsp4c3`
+
 # DaultVoor2
 -solved
 
