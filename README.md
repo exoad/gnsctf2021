@@ -114,9 +114,6 @@ you this super dark green color
 -use gdb
 
 # bookface
--requires two people to infiltrate the site at once within a limit of 10 minutes to take
-down one of the books
-  
--books excluded: nottflag
-  
-Stuck On: determining what this "popular" book is
+-web vuln topic: broken auth & session management [click here](https://cwe.mitre.org/data/definitions/724.html)
+
+-use burp suite
