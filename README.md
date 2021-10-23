@@ -3,16 +3,7 @@
 
 Stuck On: Getting the rest of the flag
 
--flag part located in section gnsCTF2
-
-# Noisy Transmission
--Listen to the morse code
-  
--the .wav file is the actual challenge
-
--check using exiftool
-  
-Stuck On: Online decoders get overrun by the amount of static within
+-flag part located in section gnsCTF
 
 # Quiet and falling
 -use your inspector and select the element representing the "..." and there
