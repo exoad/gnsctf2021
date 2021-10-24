@@ -3,12 +3,13 @@
 using namespace std;
 
 int main(void) {
+  system("node shashashaSolve.js");
   ifstream fin;
   fin.open("output.txt");
   string original;
   fin >> original;
 
-  fin.open("has2.txt");
+  fin.open("hash2.txt");
   string alter;
   fin >> alter;
 

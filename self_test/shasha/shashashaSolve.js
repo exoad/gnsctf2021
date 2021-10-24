@@ -258,8 +258,8 @@ function hex_to_ascii(str1) {
 }
 
 try {
-  fs.writeFileSync("self_test/shasha/hash1.txt", hex_to_ascii(hashes.join("")));
-  fs.writeFileSync("self_test/shasha/hash2.txt", hashes.join(""));
+  fs.writeFileSync("/self_test/shasha/pretty.txt", hex_to_ascii(hashes.join("")));
+  fs.writeFileSync("/self_test/shasha/hash2.txt", hashes.join(""));
   //file written successfully
 } catch (err) {
   console.error(err);
