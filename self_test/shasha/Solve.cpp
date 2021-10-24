@@ -13,4 +13,6 @@ int main(void) {
   fin >> alter;
 
   cout << (original == alter ? "yes" : "no") << endl;
+
+  fin.close();
 }
