@@ -254,9 +254,9 @@ function hex_to_ascii(str1) {
   return str;
 }
 
-fs.writeFile("./pretty.txt", hex_to_ascii(hashes.join("")), err => {
-  console.error(err ? err : "what");
+fs.writeFile("./cache/pretty.txt", hex_to_ascii(hashes.join("")), err => {
+  console.error(err ? err : "");
 });
 fs.writeFile("./hash2.txt", hashes.join(""), err => {
-  console.error(err ? err : "what");
+  console.error(err ? err : "");
 });
