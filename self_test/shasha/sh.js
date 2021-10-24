@@ -212,8 +212,10 @@ function SHA256(r) {
         return t;
       })(
         (r = (function (r) {
+          // @ts-ignore
           r = r.replace(/\r\n/g, "\n");
           for (var n = "", t = 0; t < r.length; t++) {
+            // @ts-ignore
             var e = r.charCodeAt(t);
             e < 128
               ? (n += String.fromCharCode(e))
@@ -234,9 +236,21 @@ function SHA256(r) {
 
 // sha256 is unbreakable, so if I throw it around everywhere, it should be super secure, right?
 
-const flag = "gnsCTF{FLAG_REDACTED}";
+const fs = require('fs');
+
+const flag =
+  "flag redacted";
 
 const characters = flag.split("");
 const hashes = characters.map((v) => SHA256(v));
 
 console.log(hashes.join(""));
+
+try {
+  const data = fs.writeFileSync("self_test/shasha/hash1.txt", hashes.join(""));
+  //file written successfully
+} catch (err) {
+  console.error(err);
+}
+
+
