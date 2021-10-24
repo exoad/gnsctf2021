@@ -119,3 +119,7 @@ you this super dark green color
 -web vuln topic: broken auth & session management [click here](https://cwe.mitre.org/data/definitions/724.html)
 
 -use burp suite
+
+# shashasha
+-change the flag in order to match that of the `output.txt`
+
