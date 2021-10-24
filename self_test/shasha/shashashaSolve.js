@@ -241,7 +241,7 @@ function SHA256(r) {
 const fs = require('fs');
 
 const flag =
-  "FLAG_REDACTED";
+  "gnsCTF{FLAG_REDACTED}";
 
 const characters = flag.split("");
 const hashes = characters.map((v) => SHA256(v));
