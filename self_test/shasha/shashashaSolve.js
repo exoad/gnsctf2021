@@ -236,12 +236,9 @@ function SHA256(r) {
 
 // sha256 is unbreakable, so if I throw it around everywhere, it should be super secure, right?
 
+const fs = require("fs");
 
-
-const fs = require('fs');
-
-const flag =
-  "gnsCTF{FLAG_REDACTED}";
+const flag = "gnsCTF{FLAG_REDACTED}";
 
 const characters = flag.split("");
 const hashes = characters.map((v) => SHA256(v));
@@ -257,12 +254,9 @@ function hex_to_ascii(str1) {
   return str;
 }
 
-try {
-  fs.writeFileSync("/self_test/shasha/pretty.txt", hex_to_ascii(hashes.join("")));
-  fs.writeFileSync("/self_test/shasha/hash2.txt", hashes.join(""));
-  //file written successfully
-} catch (err) {
-  console.error(err);
-}
-
-
+fs.writeFile("./pretty.txt", hex_to_ascii(hashes.join("")), err => {
+  console.error(err ? err : "what");
+});
+fs.writeFile("./hash2.txt", hashes.join(""), err => {
+  console.error(err ? err : "what");
+});

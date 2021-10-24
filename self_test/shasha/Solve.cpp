@@ -2,18 +2,16 @@
 
 using namespace std;
 
+string read(string filename) {
+  ifstream fin;
+  fin.open(filename);
+  string r;
+  fin >> r;
+  return r;
+}
+
 int main(void) {
   system("node shashashaSolve.js");
-  ifstream fin;
-  fin.open("output.txt");
-  string original;
-  fin >> original;
 
-  fin.open("hash2.txt");
-  string alter;
-  fin >> alter;
-
-  cout << (original == alter ? "yes" : "no") << endl;
-
-  fin.close();
+  cout << (read("output.txt") == read("hash2.txt") ? "yes" : "no") << endl;
 }
