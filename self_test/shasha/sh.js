@@ -1,31 +1,65 @@
 // Jojo: SHA256 is unbreakable!
 // this is not the challenge! Don't waste your time trying to reverse sha256
 
+/**
+ * @param {string | any[]} r
+ */
 function SHA256(r) {
   var n = 8,
     t = 0;
+  /**
+   * @param {number} r
+   * @param {number} n
+   */
   function e(r, n) {
     var t = (65535 & r) + (65535 & n);
     return (((r >> 16) + (n >> 16) + (t >> 16)) << 16) | (65535 & t);
   }
+  /**
+   * @param {number} r
+   * @param {number} n
+   */
   function o(r, n) {
     return (r >>> n) | (r << (32 - n));
   }
+  /**
+   * @param {number} r
+   * @param {number} n
+   */
   function u(r, n) {
     return r >>> n;
   }
+  /**
+   * @param {number} r
+   * @param {number} n
+   * @param {number} t
+   */
   function a(r, n, t) {
     return (r & n) ^ (~r & t);
   }
+  /**
+   * @param {number} r
+   * @param {number} n
+   * @param {number} t
+   */
   function f(r, n, t) {
     return (r & n) ^ (r & t) ^ (n & t);
   }
+  /**
+   * @param {number} r
+   */
   function c(r) {
     return o(r, 2) ^ o(r, 13) ^ o(r, 22);
   }
+  /**
+   * @param {number} r
+   */
   function i(r) {
     return o(r, 6) ^ o(r, 11) ^ o(r, 25);
   }
+  /**
+   * @param {any} r
+   */
   function h(r) {
     return o(r, 7) ^ o(r, 18) ^ u(r, 3);
   }
