@@ -27,6 +27,11 @@ the flag via /flag
 this problem asking on how to think of a way to trick this program without
 crashing it (core dump)
   
+-actual plan, to use gdb and then we overflow onto the next memory location (which should be the "correct" password is held):
+`python -c "print("\x29")*30" | nc gnsctf.ml 4020`
+
+-`ezpzlemonsqu` is the furthest you could without core dump  
+  
 Stuck On: Basic Logic down, just gotta actually figure out how to do this
 
 # xor key secrecy
