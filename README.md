@@ -90,21 +90,22 @@ Key tries:
   
   
 # CDN++
--the main program is figuring out a binary format in the extension of the allowed
-extensions that will not work with it
-  
-Stuck On: Actually creating such an image (Maybe corrupting an image?)
-  
-Known: Image size cannot exceed 16mb
+-inject php code?
+
+-look at the bot.py and server.py files
+
+Stuck On: What?
 
 # My World
 -does not involve actually loading world into Minecraft
   
 -due to the hint being "built somewhere" it should be noted that it should be found
-within the folder "poi" (point of interaction) as a binary
+within the folder region or something not sure
 
 # Crappy Bird
 -JavaScript injection of the file "data.unity3d"
+  
+-use tampermonkey to inject code  
   
 Stuck On: determining the file to alter
 
