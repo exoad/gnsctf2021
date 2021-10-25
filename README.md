@@ -8,6 +8,11 @@ Stuck On: Getting the rest of the flag
 
 -flag part located in section gnsCTF
 
+# Fake image
+-pull and run the docker image
+
+Stuck On: ?
+
 # Quiet and falling
 -use your inspector and select the element representing the "..." and there
 should be an image source tag attached with a mp3 file
