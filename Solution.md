@@ -12,7 +12,7 @@ After this script began to take on meaning, there was comment on the following:
 which further confirmed 
 
 # Crappy Bird
--solved
+-solved (i thought it was code injection lmao)
 
 Solution: Go to the shope and import data, change the import data to like `9999999999999999999` and then import, this will change the coin count. Once you click play
 the flag will appear but you must be quick to take a screenshot of it of `50ON_7O_B3_R3MOV3D`
