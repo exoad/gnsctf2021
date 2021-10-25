@@ -15,7 +15,7 @@ which further confirmed
 -solved
 
 Solution: Go to the shope and import data, change the import data to like `9999999999999999999` and then import, this will change the coin count. Once you click play
-the flag will appear but you must be quick to take a screenshot of it
+the flag will appear but you must be quick to take a screenshot of it of `50ON_7O_B3_R3MOV3D`
 
 # Noisy Transmission
 -solved
