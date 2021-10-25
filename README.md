@@ -1,3 +1,6 @@
+# NOTES ON ALL OF THE PROBLEMS THAT ARE UNSOLVED 
+Check [Solutions.md](./Solutions.md) for all of the solved ones and their documented solutions
+
 # Encyclopedia Knowledge:
 -use Wikipedia view version edited by user GnsCtf2 on day Oct 11
 
