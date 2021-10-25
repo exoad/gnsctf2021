@@ -11,6 +11,9 @@ should be an image source tag attached with a mp3 file
   
 Stuck On: understanding what this mp3 file actually does
 
+# SuperFGG
+-[this might be helpful?](https://www.youtube.com/watch?v=3g0N__K7Wlo)
+
 # pwner
 -Use pwntools to decipher the \x (hex int escape codes) 
   
