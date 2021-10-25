@@ -11,6 +11,12 @@ After this script began to take on meaning, there was comment on the following:
 ```// My electric eye broke and messed up the bit arrangements... SAD!```
 which further confirmed 
 
+# Crappy Bird
+-solved
+
+Solution: Go to the shope and import data, change the import data to like `9999999999999999999` and then import, this will change the coin count. Once you click play
+the flag will appear but you must be quick to take a screenshot of it
+
 # Noisy Transmission
 -solved
 
