@@ -102,13 +102,6 @@ Stuck On: What?
 -due to the hint being "built somewhere" it should be noted that it should be found
 within the folder region or something not sure
 
-# Crappy Bird
--JavaScript injection of the file "data.unity3d"
-  
--use tampermonkey to inject code  
-  
-Stuck On: determining the file to alter
-
 # Monochrome Butterfly
 -the blocks are in binary (most likely)
   
