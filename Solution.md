@@ -11,6 +11,15 @@ After this script began to take on meaning, there was comment on the following:
 ```// My electric eye broke and messed up the bit arrangements... SAD!```
 which further confirmed 
 
+# SuperFPG
+-solved
+
+Solution: Since the source code for the player object was posted, the object was titled "Player" this could then gives the following abilities:
+
+`unityInstance.SendMessage("Player", "SetMoves", 999999)`
+
+Then we lure the final guy and we use the above command to finally get the flag of go0d_g8m3_4e5ign
+
 # Crappy Bird
 -solved (i thought it was code injection lmao)
 
