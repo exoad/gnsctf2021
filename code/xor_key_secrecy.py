@@ -27,5 +27,7 @@ def compute_key_length(text: bytes) -> int:
         if min_score is None or score < min_score:
             min_score, key_len = score, klen
     return key_len
-    
+
+def comput_
+
 print(compute_key_length(bytes("0901073031250910075d300740061600562b055c0d463a131e5009", 'utf-8')))
