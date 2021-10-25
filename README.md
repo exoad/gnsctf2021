@@ -1,9 +1,17 @@
+# NOTES ON ALL OF THE PROBLEMS THAT ARE UNSOLVED 
+Check [Solutions.md](./Solutions.md) for all of the solved ones and their documented solutions
+
 # Encyclopedia Knowledge:
 -use Wikipedia view version edited by user GnsCtf2 on day Oct 11
 
 Stuck On: Getting the rest of the flag
 
 -flag part located in section gnsCTF
+
+# Fake image
+-pull and run the docker image
+
+Stuck On: ?
 
 # Quiet and falling
 -use your inspector and select the element representing the "..." and there
@@ -101,13 +109,6 @@ Stuck On: What?
   
 -due to the hint being "built somewhere" it should be noted that it should be found
 within the folder region or something not sure
-
-# Crappy Bird
--JavaScript injection of the file "data.unity3d"
-  
--use tampermonkey to inject code  
-  
-Stuck On: determining the file to alter
 
 # Monochrome Butterfly
 -the blocks are in binary (most likely)
