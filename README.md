@@ -27,6 +27,12 @@ the flag via /flag
 this problem asking on how to think of a way to trick this program without
 crashing it (core dump)
   
+-actual plan, to use gdb and then we overflow onto the next memory location (which should be the "correct" password is held):
+
+`python -c "print("\x29")*30" | nc gnsctf.ml 4020`
+
+-`ezpzlemonsqu` is the furthest you could without core dump  
+  
 Stuck On: Basic Logic down, just gotta actually figure out how to do this
 
 # xor key secrecy
@@ -84,21 +90,22 @@ Key tries:
   
   
 # CDN++
--the main program is figuring out a binary format in the extension of the allowed
-extensions that will not work with it
-  
-Stuck On: Actually creating such an image (Maybe corrupting an image?)
-  
-Known: Image size cannot exceed 16mb
+-inject php code?
+
+-look at the bot.py and server.py files
+
+Stuck On: What?
 
 # My World
 -does not involve actually loading world into Minecraft
   
 -due to the hint being "built somewhere" it should be noted that it should be found
-within the folder "poi" (point of interaction) as a binary
+within the folder region or something not sure
 
 # Crappy Bird
 -JavaScript injection of the file "data.unity3d"
+  
+-use tampermonkey to inject code  
   
 Stuck On: determining the file to alter
 
