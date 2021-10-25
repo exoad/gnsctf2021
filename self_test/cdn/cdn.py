@@ -1,10 +1,10 @@
 import random, string, bot
 from flask import Flask, request, redirect, render_template
 
-ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
+ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'} # allowed file types
 
 app = Flask(__name__)
-app.config['MAX_CONTENT_LENGTH'] = 16 * 1000 * 1000
+app.config['MAX_CONTENT_LENGTH'] = 16 * 1000 * 1000 # 16 megabytes
 
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
@@ -22,12 +22,12 @@ def upload_file():
             return redirect(request.url)
         
         if file and allowed_file(fn):
-            random_id = ''.join([random.choice(string.ascii_letters + string.digits) for n in range(32)])
+            random_id = ''.join([random.choice(string.ascii_letters + string.digits) for n in range(32)]) # makes the id
             file.save('static/' + fn)
 
             data = '<img src="%s"/>' % fn
             with open('static/%s.html' % random_id, 'w') as f:
-                f.write(data)
+                f.write(data) # append the image data to the upload html
 
             return render_template('upload.html', id = random_id)
 
