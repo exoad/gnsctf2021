@@ -11,16 +11,6 @@ should be an image source tag attached with a mp3 file
   
 Stuck On: understanding what this mp3 file actually does
 
-# SuperFGG
--[this might be helpful?](https://www.youtube.com/watch?v=3g0N__K7Wlo)
-
--using `unityInstance.SendMessage("Flag")` we get `SendMessage: object Flag does not have receiver for function (null)!` meaning this is a usable
-object
-
--look at the attached source code file and try all the objects
-
--format: `unityInstance.SendMessage(object, func, val)`
-
 # pwner
 -Use pwntools to decipher the \x (hex int escape codes) 
   
