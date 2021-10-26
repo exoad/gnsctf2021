@@ -12,6 +12,15 @@ e: `65537`
 
 plaintext: `7508877384402416653085955384220958443375619030239966576`
 
+# Crappy Bird Extension
+-the letter separators of `ABCDEF` can appear in any order
+
+-here are some more stuffs:
+
+`D000A00000B7530F000C000E000` - coin value of 3
+
+`D000A20000B0EA60F000C000E000` - coin value of 26
+
 # Encyclopedia Knowledge:
 -use Wikipedia view version edited by user GnsCtf2 on day Oct 11
 
