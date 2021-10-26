@@ -25,6 +25,8 @@ plaintext: `7508877384402416653085955384220958443375619030239966576`
 
 `D000A50000BFEA60F900C000E000` - coin value of 51 (hmmm) 
 
+`D000A50000B4EA60F000C000E000` - coin value of 53 (hmmm) 
+
 # Encyclopedia Knowledge:
 -use Wikipedia view version edited by user GnsCtf2 on day Oct 11
 
