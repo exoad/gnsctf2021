@@ -21,6 +21,8 @@ plaintext: `7508877384402416653085955384220958443375619030239966576`
 
 `D000A20000B0EA60F000C000E000` - coin value of 26
 
+`D000A50000B0EA60F000C000E000` - coin value of 56 (does this mean A holds the value of the tenth place?)
+
 # Encyclopedia Knowledge:
 -use Wikipedia view version edited by user GnsCtf2 on day Oct 11
 
