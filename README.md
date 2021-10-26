@@ -31,6 +31,8 @@ plaintext: `7508877384402416653085955384220958443375619030239966576`
 
 `D001A50000BDEA60F000C000E000` - coin value of 59 (bruh)
 
+`D001A90000BDEA60F000C000E000` - coin value of 99 (wow)
+
 # Encyclopedia Knowledge:
 -use Wikipedia view version edited by user GnsCtf2 on day Oct 11
 
