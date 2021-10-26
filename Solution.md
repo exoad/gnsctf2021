@@ -3,6 +3,12 @@
 
 Exploit: Just literally put your cursor over the gif and you could then see the link embedded as the name of the pokemon
 
+# Noot's Flat Earth Tavern
+-solved
+
+Solution: Using burpsuite, you basically get Noot's token from one of his messages, then when you are using the `/flag` command, 
+replace your token with Noot's token to get gnsCTF{wh4t5_th3_d34l_w1th_s0ck3t10}
+
 # Hackletric Eye
 -solved
 
