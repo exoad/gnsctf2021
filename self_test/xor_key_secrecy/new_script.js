@@ -1,5 +1,5 @@
 let input = `CQEHMDElCRAHXTAHQAYWAFYrBVwNRjoTHlAJ`;
-
+const atob = require('atob');
 // Convert base64-encoded string back to the original bytes
 input = atob(input);
 
@@ -83,11 +83,11 @@ for (let i = 0; i < totalChunks; i++) {
 }
 
 let tcounter = 0;
-input.split('').forEach(char => {
+input.split('').forEach(charx => {
   if (tcounter === keySize) {
     tcounter = 0;
   }
-  transposed[tcounter].push(char);
+  transposed[tcounter].push(charx);
   tcounter++;
 });
 
