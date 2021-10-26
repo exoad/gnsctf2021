@@ -3,6 +3,11 @@
 
 Exploit: Just literally put your cursor over the gif and you could then see the link embedded as the name of the pokemon
 
+# Hackletric Eye
+-solved
+
+Solution: The flag is embedded within the file
+
 # Dault Voor Electric Eye
 -solved
 
