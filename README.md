@@ -15,6 +15,8 @@ plaintext: `7508877384402416653085955384220958443375619030239966576`
 # Crappy Bird Extension
 -the letter separators of `ABCDEF` can appear in any order
 
+-value B is where the value assembly happens 
+
 -here are some more stuffs:
 
 `D000A00000B7530F000C000E000` - coin value of 3
