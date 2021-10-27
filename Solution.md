@@ -31,7 +31,7 @@ which further confirmed
 # SuperFPG
 -solved
 
-Solution: Since the source code for the player object was posted, the object was titled "Player" this could then gives the following abilities:
+Exploit: Since the source code for the player object was posted, the object was titled "Player" this could then gives the following abilities:
 
 `unityInstance.SendMessage("Player", "SetMoves", 999999)`
 
