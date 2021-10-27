@@ -47,15 +47,7 @@ should be an image source tag attached with a mp3 file
 Stuck On: understanding what this mp3 file actually does
 
 # pwner
--Use pwntools to decipher the \x (hex int escape codes) 
-  
-Stuck On: Since the hex chars are not supposed to be typeable, maybe inject them with python?
-
-# Noot's Flat Earth Tavern
--Command: /flag but disabled because not admin
--finding the right command to give you access as either admin
--finding an exploit to view as admin thus leading us to be able to view
-the flag via /flag
+-try the `solve_pwner` shell script to auto this action (probably not very efficient or might not work at all)
 
 # ez
 -due to "gets()" not being able to control buffer size, it should be assumed
