@@ -49,7 +49,7 @@ Stuck On: understanding what this mp3 file actually does
 # pwner
 -Use pwntools to decipher the \x (hex int escape codes) 
   
-Stuck On: \x84 when convertted to ASCII is invalid
+Stuck On: Since the hex chars are not supposed to be typeable, maybe inject them with python?
 
 # Noot's Flat Earth Tavern
 -Command: /flag but disabled because not admin
