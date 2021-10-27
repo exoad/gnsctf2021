@@ -7,7 +7,7 @@ Exploit: Just literally put your cursor over the gif and you could then see the 
 -solved
 
 Solution: Go to Great Neck South wikipedia page, then go to view histiry and see the edit made by user "GnsCtf2" then scroll down to
-find part 1, then go back to the contribs of GnsCtf2 to view other parts to get gnsCTF{w1k1_15_4_b4d_50urc3}
+find part 1, then go back to the contribs of GnsCtf2 to view other parts to get `gnsCTF{w1k1_15_4_b4d_50urc3}`
 
 # Noot's Flat Earth Tavern
 -solved
