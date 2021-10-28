@@ -1,6 +1,20 @@
 # NOTES ON ALL OF THE PROBLEMS THAT ARE UNSOLVED 
 Check [Solutions.md](./Solutions.md) for all of the solved ones and their documented solutions
 
+# Violet
+
+```
+0:10 TOP: a monologue, MIDDLE: "403.", BOTTOM: hatred stirs up dissention, but love covers over all wrongs (Proverbs 10:12)
+
+0:32 TOP: a monologue, MIDDLE: "520" (no period), BOTTOM: but he knows the way that I take; when he has tested me, I will come forth as gold (Job 23:10)
+
+1:14 TOP: a monologue, MIDDLE: "913.", BOTTOM: come to me all you who are weary and burdened and I will give you rest (Matthew 11:28)
+
+1:37 TOP: Beliefs, MIDDLE: "1016.", BOTTOM: and now these three remain: faith, hope, and love but the greatest of these is love (1 Corinthians 13:13)
+
+2:43 TOP: a monologue, MIDDLE: "1129.", BOTTOM: for we brought nothing into the world and we can take nothing out of it. (1 Timothy 6:7)
+```
+
 # RiSuAyunda
 -answer sequence: `y` `y` `31415926535900024685333724635123260888029162081305437033832795028841` `n` `y` 
 
