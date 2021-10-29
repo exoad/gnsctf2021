@@ -1,6 +1,10 @@
 # NOTES ON ALL OF THE PROBLEMS THAT ARE UNSOLVED 
 Check [Solutions.md](./Solutions.md) for all of the solved ones and their documented solutions
 
+# Ceasura of Despair
+
+```openssl aes-256-cbc -d -pbkdf2 -in out.enc -out result_out.txt```
+
 # Violet
 
 ```
