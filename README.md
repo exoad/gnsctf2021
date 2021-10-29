@@ -1,5 +1,5 @@
 # NOTES ON ALL OF THE PROBLEMS THAT ARE UNSOLVED 
-Check [Solutions.md](./Solutions.md) for all of the solved ones and their documented solutions
+Check [Solutions.md](./SOLUTIONS_DOCUMENTATION.md) for all of the solved ones and their documented solutions
 
 # Ceasura of Despair
 
