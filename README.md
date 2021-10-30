@@ -5,9 +5,6 @@ Check [Solutions.md](./SOLUTIONS_DOCUMENTATION.md) for all of the solved ones an
 
 ```openssl aes-256-cbc -d -pbkdf2 -in out.enc -out result_out.txt```
 
-# Tupperware
--Helpful tool? [Click Here](https://keelyhill.github.io/tuppers-formula/?preset=2OIMOPbfPBtCWYiWCKUaVjTaOqPtXpgV71I3PVdTAZbhRx78PCNdh5AoY0XnpouotnfRckvX7JRC0vzo2I9A0QOU4TxpX1VemYtCZiWKmrUcj2mMUn3r3912bm6OfhNRLq34UbwDfMdRBVrNDl3rL8zqgVz0RiUIkZJanhsNfZW49SD04tE62VqEaAsjUzQeAJdrSRd9zFnVdru7ovJcOqx64wtUPX6tgJUIm5VdAVU6CxfbQEDqRc7sJeWp1A6szlitOhgsTD8a6ONYZsUCujbbUXoNsat9fGXvSvaiQ5x9AKz)
-
 # Violet
 
 ```
