@@ -42,7 +42,7 @@ where ![](./assets/variable_lower_m.png) is our message for encoding
 
 where ![](./assets/variable_lower_e.png) is our public key
 
-where ![](./assets/variable_M.png) is a modulus which is the value of ![](./assets/variable_lower_p) multiplied by ![](./assets/variable_lower_q)
+where ![](./assets/variable_M.png) is a modulus which is the value of ![](./assets/variable_lower_p.png) multiplied by ![](./assets/variable_lower_q.png)
 
 # Crappy Bird Extension
 -the letter separators of `ABCDEF` can appear in any order
