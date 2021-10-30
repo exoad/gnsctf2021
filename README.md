@@ -36,6 +36,8 @@ where ![](./assets/variable_lower_e.png) is our public key
 
 where ![](./assets/variable_N.png) is a modulus which is the value of ![](./assets/variable_lower_p.png) multiplied by ![](./assets/variable_lower_q.png)
 
+TOTIENT FUNCTION: `φ(n)=(p−1)(q−1)=pq−p−q+1=(n+1)−(p+q)`
+
 # Crappy Bird Extension
 -the letter separators of `ABCDEF` can appear in any order
 
