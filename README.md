@@ -36,7 +36,7 @@ where ![](./assets/variable_lower_e.png) is our public key
 
 where ![](./assets/variable_N.png) is a modulus which is the value of ![](./assets/variable_lower_p.png) multiplied by ![](./assets/variable_lower_q.png)
 
-TOTIENT FUNCTION: `φ(n)=(p−1)(q−1)=pq−p−q+1=(n+1)−(p+q)`
+TOTIENT FUNCTION: `φ(n)=(p−1)(q−1)=pq−p−q+1=(n+1)−(p+q)` refer to [this](https://crypto.stackexchange.com/questions/5791/why-is-it-important-that-phin-is-kept-a-secret-in-rsa)
 
 # Crappy Bird Extension
 -the letter separators of `ABCDEF` can appear in any order
