@@ -1,18 +1,157 @@
 # NOTES ON ALL OF THE PROBLEMS THAT ARE UNSOLVED 
-Check [Solutions.md](./Solutions.md) for all of the solved ones and their documented solutions
+Check [Solutions.md](./SOLUTIONS_DOCUMENTATION.md) for all of the solved ones and their documented solutions
+
+# pitch perfect
+```
+G#3
+G3
+A3
+
+D3
+A3
+G3
+
+F3
+G3
+G3
+
+C3
+F3
+A#3
+
+A#3
+D#3
+A3
+
+D3
+E3
+C#3
+
+G#3
+D#3
+E3
+
+D#3
+G3
+B3
+
+A3
+G3
+E3
+
+C3
+A3
+D3
+
+G#3
+G3
+G3
+
+B3
+G#3
+E3
+
+E3
+C#3
+G#3
+
+E3
+G3
+B3
+
+A#3
+C#3
+E3
+
+C3
+A3
+A3
+
+G3
+B3
+A3
+
+G#3
+A3
+F#3
+
+E3
+E3
+A3
+
+D3
+A3
+G3
+
+G#3
+D#3
+A3
+
+F#3
+E3
+C#3
+
+G#3
+D3
+E3
+
+D#3
+G3
+B3
+
+E3
+C#3
+A3
+
+G#3
+A#3
+F3
+```
+
+# Ceasura of Despair
+
+```openssl aes-256-cbc -d -pbkdf2 -in out.enc -out result_out.txt```
+
+# Violet
+
+```
+0:10 TOP: a monologue, MIDDLE: "403.", BOTTOM: hatred stirs up dissention, but love covers over all wrongs (Proverbs 10:12)
+
+0:32 TOP: a monologue, MIDDLE: "520" (no period), BOTTOM: but he knows the way that I take; when he has tested me, I will come forth as gold (Job 23:10)
+
+1:14 TOP: a monologue, MIDDLE: "913.", BOTTOM: come to me all you who are weary and burdened and I will give you rest (Matthew 11:28)
+
+1:37 TOP: Beliefs, MIDDLE: "1016.", BOTTOM: and now these three remain: faith, hope, and love but the greatest of these is love (1 Corinthians 13:13)
+
+2:43 TOP: a monologue, MIDDLE: "1129.", BOTTOM: for we brought nothing into the world and we can take nothing out of it. (1 Timothy 6:7)
+```
 
 # RiSuAyunda
--answer sequence: `y` `y` `31415926535900024685333724635123260888029162081305437033832795028841` `n` `y` 
+-answer sequence: `y` | `y` | `31415926535900024685333724635123260888029162081305437033832795028841` | `n` | `y` | `1879192356672253348435765130293352140927781989531481020198546673766426345654011142567837860979525556598757017604728576540647160364587937140263195801545243832809439986532645022057677037910762855325717338581677245387222365851270247202736126599755161321078000206514648543999372922638980374879198040944726993835915237830362427534098786868068100744257865512097199512827926093539210499171426929430381291365207821418816354830788959819939631962268332004243217577857687822392885281354431964523963330286071274566946102491050044852096700865263007628239533169200882797719953955616673579243204805635237794198308486763105365474997` | `y` | `31415926535900024685333724635091844960493264148920744000000000000000` | `y` | `785398163397500617133343115877296124012331603723018600000000000000` | `n` | `y` |
 
--Stuck On: finding the ciphertext using the following:
+-Stuck On: Finding d value given n, e, and p
 
-n: `22409902333678780634396349171704874375996011264748935370870001103378796405764583554160902218250028718866407072599288925777830094854098783144112829605926701890563594390880123408640544183138795257118320438217784898175209219145924671131478263565292619847283372559317203108765938560657693521080902789733484857516506094749406101588558894585946990157947819769843020908790689153089503020787264275986808655454784152699927238904358404825275899856294390104357819299858264494871614654576558638200696100726844539194077580911010240662216110858208629015407745368880794560020963689048498514495548492584344163974901799588780045024061`
+**Notes**
 
-e: `65537`
+-encoding is done by the formula ![](./assets/index.png)
 
-plaintext: `7508877384402416653085955384220958443375619030239966576`
+where ![](./assets/variable_M.png) is our final encoded message
 
-cipher? `7508877384402416653085955384220958443375619030239966576`
+where ![](./assets/variable_lower_m.png) is our message for encoding
+
+where ![](./assets/variable_lower_e.png) is our public key
+
+where ![](./assets/variable_N.png) is a modulus which is the value of ![](./assets/variable_lower_p.png) multiplied by ![](./assets/variable_lower_q.png)
+
+TOTIENT FUNCTION: `φ(n)=(p−1)(q−1)=pq−p−q+1=(n+1)−(p+q)` refer to [this](https://crypto.stackexchange.com/questions/5791/why-is-it-important-that-phin-is-kept-a-secret-in-rsa)
+
+CARMICHAEL FUNCTION: `λ(n)=LCM(p−1, q−1)` refer to [this](https://math.stackexchange.com/questions/509436/using-carmichael-function-in-rsa) 
+
+EXTENDED EUCLIDEAN: [reference](https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm)
+
+DECODING EXPONENT: `d = e^-1 mod (p-1) (q-1)`
+
+GOOD PAPER [HERE](https://math.asu.edu/sites/default/files/rsa_0.pdf)
 
 # Crappy Bird Extension
 -the letter separators of `ABCDEF` can appear in any order
@@ -35,18 +174,6 @@ cipher? `7508877384402416653085955384220958443375619030239966576`
 
 `D001A90000BDEA60F000C000E000` - coin value of 99 (wow)
 
-# Encyclopedia Knowledge:
--use Wikipedia view version edited by user GnsCtf2 on day Oct 11
-
-Stuck On: Getting the rest of the flag
-
--flag part located in section gnsCTF
-
-# Fake image
--pull and run the docker image
-
-Stuck On: ?
-
 # Quiet and falling
 -use your inspector and select the element representing the "..." and there
 should be an image source tag attached with a mp3 file
@@ -54,15 +181,7 @@ should be an image source tag attached with a mp3 file
 Stuck On: understanding what this mp3 file actually does
 
 # pwner
--Use pwntools to decipher the \x (hex int escape codes) 
-  
-Stuck On: \x84 when convertted to ASCII is invalid
-
-# Noot's Flat Earth Tavern
--Command: /flag but disabled because not admin
--finding the right command to give you access as either admin
--finding an exploit to view as admin thus leading us to be able to view
-the flag via /flag
+-try the `solve_pwner` shell script to auto this action (probably not very efficient or might not work at all)
 
 # ez
 -due to "gets()" not being able to control buffer size, it should be assumed
@@ -144,23 +263,10 @@ Stuck On: What?
 -due to the hint being "built somewhere" it should be noted that it should be found
 within the folder region or something not sure
 
-# Monochrome Butterfly
--the blocks are in binary (most likely)
-  
-Stuck On (#1): Is colored = 0 & no color = 1 or the other way?
-  
-Stuck On (#2): What does the hint mean of R0G5B0? Invertting the colors does not give
-you this super dark green color
-
 # SpellingC
 -use libc to understand the interactions
   
 -use gdb
-
-# bookface
--web vuln topic: broken auth & session management [click here](https://cwe.mitre.org/data/definitions/724.html)
-
--use burp suite
 
 # shashasha
 -change the flag in order to match that of the `output.txt`
