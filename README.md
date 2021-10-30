@@ -40,6 +40,8 @@ TOTIENT FUNCTION: `φ(n)=(p−1)(q−1)=pq−p−q+1=(n+1)−(p+q)` refer to [th
 
 CARMICHAEL FUNCTION: `λ(n)=LCM(p−1, q−1)` refer to [this](https://math.stackexchange.com/questions/509436/using-carmichael-function-in-rsa) 
 
+EXTENDED EUCLIDEAN: [reference](https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm)
+
 # Crappy Bird Extension
 -the letter separators of `ABCDEF` can appear in any order
 
