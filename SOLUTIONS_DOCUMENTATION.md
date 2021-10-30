@@ -1,3 +1,12 @@
+# Monochrome Butterfly
+-solved
+
+Solution: This was based on Image Stego. Using [this](./apps/stegsolve.jar) we can alter between the colors and color phases to reveal 
+a QR code:
+![](./assets/butterfly_qr.png)
+
+which when scanned gave us the flag `gnsCTF{h1dd3n_b3tw33n_th3_b1t_pl4n3s}`
+
 # bookface
 -solved
 
