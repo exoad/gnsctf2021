@@ -42,6 +42,8 @@ CARMICHAEL FUNCTION: `λ(n)=LCM(p−1, q−1)` refer to [this](https://math.stac
 
 EXTENDED EUCLIDEAN: [reference](https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm)
 
+DECODING EXPONENT: `d = e^-1 mod (p-1) (q-1)`
+
 # Crappy Bird Extension
 -the letter separators of `ABCDEF` can appear in any order
 
