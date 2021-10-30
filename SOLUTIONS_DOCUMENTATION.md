@@ -17,7 +17,7 @@ This gave us the account access. Which lead us to having the flag of: `gnsCTF{g3
 -solved
 
 -Solution: The main logic behind it was AES-256-CBC then DES-CBC using openssl (ignore the key derivation used):
-```bash
+```sh
 openssl enc -aes-256-cbc -d -salt -in out.enc -out aes.enc -k IRyS
 
 openssl enc -des-cbc -d -salt -in aes.enc -out des.enc -k IRyS
