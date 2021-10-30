@@ -32,6 +32,10 @@ plaintext: `7508877384402416653085955384220958443375619030239966576`
 
 cipher? `7508877384402416653085955384220958443375619030239966576`
 
+**Notes**
+
+-encoding is done by the formula ![](./assets/rsa_formula.gif)
+
 # Crappy Bird Extension
 -the letter separators of `ABCDEF` can appear in any order
 
