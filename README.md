@@ -36,6 +36,14 @@ cipher? `7508877384402416653085955384220958443375619030239966576`
 
 -encoding is done by the formula ![](./assets/index.png)
 
+where ![](./assets/variable_M.png) is our final encoded message
+
+where ![](./assets/variable_lower_m.png) is our message for encoding
+
+where ![](./assets/variable_lower_e.png) is our public key
+
+where ![](./assets/variable_M.png) is a modulus which is the value of ![](./assets/variable_lower_p) multiplied by ![](./assets/variable_lower_q)
+
 # Crappy Bird Extension
 -the letter separators of `ABCDEF` can appear in any order
 
