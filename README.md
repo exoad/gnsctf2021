@@ -67,11 +67,6 @@ GOOD PAPER [HERE](https://math.asu.edu/sites/default/files/rsa_0.pdf)
 
 `D001A90000BDEA60F000C000E000` - coin value of 99 (wow)
 
-# Fake image
--pull and run the docker image
-
-Stuck On: ?
-
 # Quiet and falling
 -use your inspector and select the element representing the "..." and there
 should be an image source tag attached with a mp3 file
@@ -160,14 +155,6 @@ Stuck On: What?
   
 -due to the hint being "built somewhere" it should be noted that it should be found
 within the folder region or something not sure
-
-# Monochrome Butterfly
--the blocks are in binary (most likely)
-  
-Stuck On (#1): Is colored = 0 & no color = 1 or the other way?
-  
-Stuck On (#2): What does the hint mean of R0G5B0? Invertting the colors does not give
-you this super dark green color
 
 # SpellingC
 -use libc to understand the interactions
