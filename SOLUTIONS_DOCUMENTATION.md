@@ -4,6 +4,18 @@
 Solution: The common web vulnerability was SQL injections which was proved using the injection code of `' or 1=1--` in the password and `admin` for the username. 
 This gave us the account access. Which lead us to having the flag of: `gnsCTF{g3t_y0ur_f4c3_0ut_0f_th4t_b00k}`
 
+# Caesura of Despair
+-solved
+
+-Solution: The main logic behind it was AES-256-CBC then DES-CBC using openssl (ignore the key derivation used):
+```bash
+openssl enc -aes-256-cbc -d -salt -in out.enc -out aes.enc -k IRyS
+
+openssl enc -des-cbc -d -salt -in aes.enc -out des.enc -k IRyS
+```
+
+getting you the flag of `gnsCTF{d4rkn355_w1ll_f4d3_away_l1ght_w1ll_gu1d3_y0ur_w4y_h0p3_has_descended_and_y0u_are_n0t_al0ne}`
+
 # Tupperware
 -solved
 
