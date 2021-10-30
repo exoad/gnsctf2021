@@ -1,6 +1,38 @@
 # NOTES ON ALL OF THE PROBLEMS THAT ARE UNSOLVED 
 Check [Solutions.md](./SOLUTIONS_DOCUMENTATION.md) for all of the solved ones and their documented solutions
 
+# pitch perfect
+```
+G#3
+G3
+A3
+D3
+A3
+G3
+F3
+G3
+G3
+C3
+F3
+A#3
+A#3
+D#3
+A3
+D3
+E3
+C#3
+G#3
+D#3
+E3
+D#3
+G3
+B3
+A3
+G3
+E3
+C3
+```
+
 # Ceasura of Despair
 
 ```openssl aes-256-cbc -d -pbkdf2 -in out.enc -out result_out.txt```
