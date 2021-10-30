@@ -44,6 +44,8 @@ EXTENDED EUCLIDEAN: [reference](https://en.wikipedia.org/wiki/Extended_Euclidean
 
 DECODING EXPONENT: `d = e^-1 mod (p-1) (q-1)`
 
+GOOD PAPER [HERE](https://math.asu.edu/sites/default/files/rsa_0.pdf)
+
 # Crappy Bird Extension
 -the letter separators of `ABCDEF` can appear in any order
 
