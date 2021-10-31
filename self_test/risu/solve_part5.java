@@ -1,13 +1,15 @@
 import java.math.BigInteger;
 
 public class MyClass {
+    static BigInteger lcm(BigInteger a, BigInteger b) {
+        if (a.signum() == 0 || b.signum() == 0)
+            return BigInteger.ZERO;
+        return a.divide(a.gcd(b)).multiply(b).abs();
+    }
     static BigInteger uno = new BigInteger("1");
     static BigInteger findD(BigInteger p, BigInteger q, BigInteger e) {
         //  d = e.modInverse(totient)
-        return e.modInverse(totient(p, q));
-    }
-    static BigInteger totient(BigInteger p, BigInteger q) {
-        return ((p.subtract(BigInteger.ONE)).multiply((q.subtract(BigInteger.ONE))));
+        return e.modInverse(lcm(p.subtract(BigInteger.ONE), q.subtract(BigInteger.ONE)));
     }
     static boolean checkN(BigInteger p, BigInteger q, BigInteger N) {
         return (p.multiply(q)).equals(N) ? true : false;
@@ -22,14 +24,7 @@ public class MyClass {
         if(checkN(p, q, n)) {
             BigInteger d = findD(p, q, e);
             //d * e == 1 modulo n
-            if((d.multiply(e)).equals(uno.mod(n))) {
-                System.out.println("YES");
-                System.out.println(d.toString());
-                System.out.close();
-            } else {
-                //a problem if it prints NO
-                System.out.println("NO");
-            }
+            System.out.println(d.toString());
         }
     }
 }
