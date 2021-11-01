@@ -174,12 +174,6 @@ GOOD PAPER [HERE](https://math.asu.edu/sites/default/files/rsa_0.pdf)
 
 `D001A90000BDEA60F000C000E000` - coin value of 99 (wow)
 
-# Quiet and falling
--use your inspector and select the element representing the "..." and there
-should be an image source tag attached with a mp3 file
-  
-Stuck On: understanding what this mp3 file actually does
-
 # pwner
 -try the `solve_pwner` shell script to auto this action (probably not very efficient or might not work at all)
 
