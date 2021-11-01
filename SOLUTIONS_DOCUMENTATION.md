@@ -1,3 +1,43 @@
+# Quiet & Falling
+-solved
+
+Solution:
+-Find the original recording of this song on YouTube: [here](https://www.youtube.com/watch?v=l4FXoiD2EvI)
+
+-In the comments:
+![](./assets/comment.png)
+
+-The text is: `good
+nice
+serenity
+Calming
+Terrific
+Fun
+{
+i
+talk
+'
+see
+_
+quiet
+utopia
+intent
+everything
+tranquil
+_
+dark
+only
+wonder
+now
+_
+happiness
+ecstatic
+real
+euphoria
+}`
+
+Taking the first letter of each word gives us: `gnsCTF{it's_quiet_down_here}`
+
 # Monochrome Butterfly
 -solved
 
