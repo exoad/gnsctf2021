@@ -108,9 +108,7 @@ A#3
 F3
 ```
 
-# Ceasura of Despair
-
-```openssl aes-256-cbc -d -pbkdf2 -in out.enc -out result_out.txt```
+Using the frequency of each base note [here](https://theonlinemetronome.com/instrument-tuner), convert them to octal?
 
 # Violet
 
