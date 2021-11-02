@@ -1,5 +1,5 @@
 import java.math.BigInteger;
-
+// PLAINTEXT = CIPHER^d mod n
 public class MyClass {
     //helper variable START
     static BigInteger uno = new BigInteger("1");
@@ -19,6 +19,22 @@ public class MyClass {
     static BigInteger carmichael(BigInteger p, BigInteger q) {
         return lcm(p.subtract(uno), q.subtract(uno));
     } 
+    
+    static BigInteger totient(BigInteger p, BigInteger q) {
+        return new BigInteger(((p.subtract(BigInteger.ONE)).multiply((q.subtract(BigInteger.ONE)))).toString());
+    }
+    
+    static void print_prime_factors(BigInteger a) {
+        for(BigInteger i = new BigInteger("2"); i.compareTo(a) < 0; i = i.add(uno)) {
+            while((a.mod(i)).equals(BigInteger.ZERO)) {
+            System.out.println(i.toString()+" ");
+            a = a.divide(i);
+         }
+      }
+      if(a.compareTo(new BigInteger("2")) > 0) {
+         System.out.println(a.toString());
+      }
+    }
     //helper methods END
     
 
@@ -32,12 +48,13 @@ public class MyClass {
     static void findD(BigInteger q, BigInteger p, BigInteger e) {
         d = e.modInverse(carmichael(p, q));
     }
+    
+    static void SOLVE(BigInteger cipher, BigInteger n) {
+        findD(q, p, e); // make sure the value of d is calculated
+        BigInteger plain = new BigInteger((cipher.modPow(d, n)).toString());
+        System.out.println(plain.toString());
+    }
     public static void main(String[] args) throws Exception {
-        if(checkN(p, q, n)) {
-            findD(q, p, e);
-            System.out.println(d.toString());
-        } else {
-            System.out.println("NO");
-        }
+        print_prime_factors(n);
     }
 }
