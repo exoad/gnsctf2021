@@ -4,7 +4,7 @@
 #include <string.h>
 #include <sys/types.h>
 #include <unistd.h>
-
+/*
 void flag()
 {
   char buf[80];
@@ -17,7 +17,7 @@ void flag()
 
   fgets(buf, 80, f);
   puts(buf);
-}
+}*/
 
 bool login()
 {
