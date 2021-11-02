@@ -26,6 +26,7 @@ public class MyClass {
     
     static void print_prime_factors(BigInteger a) {
         for(BigInteger i = new BigInteger("2"); i.compareTo(a) < 0; i = i.add(uno)) {
+            System.out.println("Calculating Result: " + i.toString())
             while((a.mod(i)).equals(BigInteger.ZERO)) {
             System.out.println(i.toString()+" ");
             a = a.divide(i);
