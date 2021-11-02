@@ -149,7 +149,7 @@ CARMICHAEL FUNCTION: `λ(n)=LCM(p−1, q−1)` refer to [this](https://math.stac
 
 EXTENDED EUCLIDEAN: [reference](https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm)
 
-DECODING EXPONENT: `d = e^-1 mod (p-1) (q-1)`
+DECODING EXPONENT: `d = e^-1 mod carmichael`
 
 GOOD PAPER [HERE](https://math.asu.edu/sites/default/files/rsa_0.pdf)
 
