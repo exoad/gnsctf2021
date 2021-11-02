@@ -8,7 +8,7 @@ public class MyClass {
     }
     static BigInteger uno = new BigInteger("1");
     static BigInteger findD(BigInteger p, BigInteger q, BigInteger e) {
-        //  d = e.modInverse(totient)
+        //  d = e.modInverse(carmichael)
         return e.modInverse(lcm(p.subtract(BigInteger.ONE), q.subtract(BigInteger.ONE)));
     }
     static boolean checkN(BigInteger p, BigInteger q, BigInteger N) {
