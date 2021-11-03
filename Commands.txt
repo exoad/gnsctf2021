@@ -1,0 +1,1 @@
+java --module-path /usr/lib/jvm/java-11-openjdk/lib/ --add-modules javafx.controls,javafx.fxml -jar ChunkyLauncher.jar 
