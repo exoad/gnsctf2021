@@ -1,3 +1,9 @@
+# Xor Key Secrecy
+-solved
+
+Solution: The first hint gave us the a semi working key `gnsCTF{}` which gave us 7 characters that seem to form words `notsecr` which from the 3rd hint, 
+I guess was to be `notsecret` plugging in this key with the cipher gave us the flag `gnsCTF{us3_s3cur3_k3y5_pl5}` | KEY: DONT OVERCOMPLICATE
+
 # My World
 -solved
 
