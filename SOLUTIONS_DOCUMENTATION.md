@@ -1,3 +1,16 @@
+# My World
+-solved
+
+Solution:
+-I used a Overhead Minecraft World Renderer [here](https://github.com/Jupisoft111/Minecraft-Overworld-Viewer/releases)
+Then I inputted the world file, to get an anomaly in one of the rendered maps:
+![](./assets/r.4167.27747.png)
+
+This image in the renderer lead us with coordinates (X,Z): 2133779, 14206976
+
+Then I just teleported there to get:
+![](./assets/map.png)
+
 # Quiet & Falling
 -solved
 
