@@ -249,12 +249,6 @@ Key tries:
 
 Stuck On: What?
 
-# My World
--does not involve actually loading world into Minecraft
-  
--due to the hint being "built somewhere" it should be noted that it should be found
-within the folder region or something not sure
-
 # SpellingC
 -use libc to understand the interactions
   
