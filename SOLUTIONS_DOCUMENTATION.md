@@ -1,3 +1,9 @@
+# Xor Key Secrecy
+-solved
+
+Solution: Being that this problem was trivial, the first guess I had from the first hint was deciphering using the key `gnsCTF{}` this gave me a few characters
+of the word(s) `notsecr` which I presumed to be `notsecret` which I then used to decipher to get `gnsCTF{us3_s3cur3_k3y5_pl5}`
+
 # My World
 -solved
 
