@@ -2,7 +2,7 @@
 
 import hashlib
 
-f = open("flag.txt", "r")
+f = open(".\\flag.txt", "r")
 flag = f.read()
 enc_flag = hashlib.sha256(flag).hexdigest()
 

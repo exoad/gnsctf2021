@@ -1,5 +1,0 @@
-#include<stdio.h>
-
-int main() {
-  printf("\x45\x49\x04\x84\x05\x84\x23\x02\x99\x32");
-}
